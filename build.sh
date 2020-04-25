@@ -13,7 +13,7 @@ if [[ "$http_proxy" != "" ]]; then
 fi
 
 if [[ "$build_cores" == "" ]]; then
-    export build_cores=6
+    export build_cores=16
 fi
 
 docker build --pull --rm --tag amarok-builder:latest $build_args -f Dockerfile .
@@ -33,4 +33,4 @@ sed -i "s/VERSION_FILL/$VERSION/" $DIR/build/DEBIAN/control
 
 dpkg-deb --build $DIR/build/
 
-mv $DIR/build.deb $DIR/amarok-$VERSION-eoan-amd64.deb
+mv $DIR/build.deb $DIR/amarok-$VERSION-focal-amd64.deb

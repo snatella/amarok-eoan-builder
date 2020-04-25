@@ -1,10 +1,14 @@
 # amarok-eoan-builder
 
+Now with Focal build!
+
 _Most users will just want to download a release from the releases page. The code is included below in case you'd like to build your own._
 
 A simple, dumb and ugly builder that pulls a copy of master from https://github.com/KDE/amarok/ and compiles it (at this time they are not tagging nor branching for versions) _without_ polluting your system with dev packages.
 
-It is solely aimed at Ubuntu 19.10 (eoan) support, which is missing an amarok package.
+It is solely aimed at Ubuntu 19.10 (eoan)/20.04 (focal) support, which is missing an amarok package.
+
+- To build for 19.10, please switch to the 19.10-eoan branch.
 
 It'll create a .deb for you with (hopefully!) correct dependancies to just install (e.g. apt install amarok-_version_.deb).
 
@@ -31,7 +35,7 @@ Building should be as simple as:
 ./build.sh
 ```
 
-And once complete, you should find an `amarok-X.Y.Z.deb` suitable for Ubuntu 19.10 available.
+And once complete, you should find an `amarok-X.Y.Z.deb` suitable for Ubuntu 20.04 available.
 
 ### Environment variables
 
